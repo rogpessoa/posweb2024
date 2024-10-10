@@ -38,8 +38,8 @@ jobs:
         uses: appleboy/scp-action@v0.1.7
         with:
           host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          key: ${{ secrets.CHAVE_SSH }}
+          username: ${{ secrets.ubuntu }}
+          key: ${{ secrets.EC2_KEY }}
           source: "frontend/index.html"
           target: "/var/www/html/"
           strip_components: 1
