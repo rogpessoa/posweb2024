@@ -37,7 +37,7 @@ jobs:
       - name: Deploy FrontEnd
         uses: appleboy/scp-action@v0.1.7
         with:
-          host: ${{ secrets.HOST }}
+          host: "34.215.177.227"
           username: ${{ secrets.ubuntu }}
           key: ${{ secrets.EC2_KEY }}
           source: "frontend/index.html"
