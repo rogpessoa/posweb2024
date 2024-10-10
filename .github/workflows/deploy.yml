@@ -23,9 +23,10 @@ jobs:
       - name: Deploy BackEnd
         uses: appleboy/scp-action@v0.1.7
         with:
-          host: "34.220.41.239"
-          username: ${{ secrets.ubuntu }}
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USER }}
           key: ${{ secrets.EC2_KEY }}
+          port: '22'
           source: "backend/myapi.py"
           target: "/home/ubuntu/myapp/"
           strip_components: 1
@@ -38,8 +39,9 @@ jobs:
         uses: appleboy/scp-action@v0.1.7
         with:
           host: "34.215.177.227"
-          username: ${{ secrets.ubuntu }}
+          username: ${{ secrets.EC2_USER }}
           key: ${{ secrets.EC2_KEY }}
+          port: '22'
           source: "frontend/index.html"
           target: "/var/www/html/"
           strip_components: 1
