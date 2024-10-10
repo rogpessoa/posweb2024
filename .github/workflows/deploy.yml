@@ -23,7 +23,7 @@ jobs:
       - name: Deploy BackEnd
         uses: appleboy/scp-action@v0.1.7
         with:
-          host: "34.220.41.239"
+          host: "ec2-34-220-41-239.us-west-2.compute.amazonaws.com"
           username: "ubuntu"
           key: ${{ secrets.CHAVE_SSH }}
           source: "backend/myapi.py"
