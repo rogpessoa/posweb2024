@@ -17,7 +17,7 @@ jobs:
         run: |
           sed -i 's/_USER_/${{ secrets.myapp_user }}/g' backend/myapi.py
           sed -i 's/_PASSWORD_/${{ secrets.myapp_passwd }}/g' backend/myapi.py
-          sed -i 's/_HOST_/${{ secrets.terraform-20241009211840968000000001.cokirqnjz0cn.us-west-2.rds.amazonaws.com }}/g' backend/myapi.py
+          sed -i 's/_HOST_/${{ secrets.terraform-20241010012553430300000001.cokirqnjz0cn.us-west-2.rds.amazonaws.com }}/g' backend/myapi.py
           sed -i 's/_DBNAME_/${{ secrets.myapp }}/g' backend/myapi.py
 
       - name: Deploy BackEnd
