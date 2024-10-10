@@ -39,7 +39,7 @@ jobs:
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
-          key: ${{ secrets.KEY }}
+          key: ${{ secrets.CHAVE_SSH }}
           source: "frontend/index.html"
           target: "/var/www/html/"
           strip_components: 1
