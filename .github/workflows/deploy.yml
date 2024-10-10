@@ -24,7 +24,7 @@ jobs:
         uses: appleboy/scp-action@v0.1.7
         with:
           host: "ec2-34-220-41-239.us-west-2.compute.amazonaws.com"
-          username: ${{ secrets.USERNAME }}
+          username: ${{ secrets.ubuntu }}
           key: ${{ secrets.EC2_KEY }}
           source: "backend/myapi.py"
           target: "/home/ubuntu/myapp/"
