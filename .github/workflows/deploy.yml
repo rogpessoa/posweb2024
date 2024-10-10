@@ -3,7 +3,7 @@ run-name: ${{ github.actor }} is deploying MyAPP 🚀
 on:
   push:
     branches:
-      - main
+      - master
   workflow_dispatch:
 
 jobs:
