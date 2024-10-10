@@ -23,7 +23,7 @@ jobs:
       - name: Deploy BackEnd
         uses: appleboy/scp-action@v0.1.7
         with:
-          host: ${{ secrets.HOST }}
+          host: ${{ secrets.terraform-20241009211840968000000001.cokirqnjz0cn.us-west-2.rds.amazonaws.com }}
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.CHAVE_SSH }}
           source: "backend/myapi.py"
