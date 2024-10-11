@@ -18,7 +18,6 @@ apt -y install \
 sudo chown -R ubuntu /var/www/html/
 
 mkdir /home/ubuntu/myapp
-sudo chown ubuntu myapp
 cd /home/ubuntu/myapp
 python3 -m venv .
 source ./bin/activate
