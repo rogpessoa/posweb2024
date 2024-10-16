@@ -1,0 +1,29 @@
+services:
+  frontend:
+#    depends_on:
+#      - backend
+    build: ./frontend
+    ports:
+      - 5000:5000
+
+  backend: 
+#    depends_on:
+#      - db
+    build: ./backend
+    ports: 
+      - 5001:5001
+
+    environment: 
+      DB_URL: mongodb://db/vidly
+    command: ./docker-entrypoint.sh
+
+#  db:
+#    image: mysql:8.0.39-bookworm
+#    ports:
+#      - 3306:3306
+#    volumes:
+#      - vidly:/data/db
+#
+#volumes:
+#  vidly:
+

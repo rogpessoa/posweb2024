@@ -20,12 +20,12 @@ data "aws_ami" "ubuntu" {
 
 resource "aws_instance" "web" {
   ami           = data.aws_ami.ubuntu.id
-  instance_type = "t3.micro"
+  instance_type = "t2.micro"
   key_name = "posweb-myapp-2024"
-  vpc_security_group_ids = [aws_security_group.posweb_myapp_2024_sg.id]
+  vpc_security_group_ids = [aws_security_group.cadastro_sg.id]
   user_data = base64encode(data.template_file.user_data.rendered)
 
   tags = {
-    Name = "HelloWorld2"
+    Name = "cadastro"
   }
 }
